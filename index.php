@@ -1,7 +1,5 @@
 <?php 
 include("includes/header.php");
-include("includes/classes/User.php");
-include("includes/classes/Post.php");
 
 
 if(isset($_POST['post'])){
@@ -78,7 +76,7 @@ if(isset($_POST['post'])){
 					type: "POST",
 					data: "page=" + page + "&userLoggedIn=" + userLoggedIn,
 					cache:false,
-					
+
 					success: function(response) {
 						$('.posts_area').find('.nextPage').remove(); //Removes current .nextpage 
 						$('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage 

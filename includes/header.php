@@ -1,5 +1,7 @@
 <?php
 require 'config/config.php';
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
 
 if (isset($_SESSION['username'])) {
     $userLoggedIn = $_SESSION['username'];
@@ -20,11 +22,16 @@ if (isset($_SESSION['username'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+	<script src="assets/js/demo.js"></script>
+	<script src="assets/js/jquery.jcrop.js"></script>
+	<script src="assets/js/jcrop_bits.js"></script>
 
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 </head>
 
 <body>
