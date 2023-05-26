@@ -169,6 +169,10 @@ textarea:focus {
 	padding: 0 5px 5px 5px;
 }
 
+.comment_section a:link{
+	text-decoration: none;
+}
+
 .comment_section img {
 	margin: 0 3px 3px 3px;
 	border-radius: 3px;
@@ -202,7 +206,9 @@ textarea:focus {
 	text-decoration: none;
 	color:#20AAE5;
 	border:none;
+	cursor: pointer;
 }
+
 
 .newsfeedPostOptions iframe {
 	border: 0px;
@@ -234,9 +240,9 @@ textarea:focus {
 	height: 100%;
 	float: left;
 	position: relative;
-	background-color: #37B0E9;
-	border-right: 10px solid #83D6FE;
-	color: #CBEAF8;
+	background-color: #45b18780;
+	border-right: 10px solid #72b7aa;
+	color: #000000;
 	margin-right: 20px;
 }
 
@@ -250,7 +256,7 @@ textarea:focus {
 
 .profile_info {
 	display: list-item;
-	background-color: #2980b9;
+	background-color: #45c57ebf;
 	width: 100%;
 	padding: 10px 0 10px 0;
 }
