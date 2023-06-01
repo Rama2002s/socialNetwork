@@ -41,6 +41,29 @@ if (isset($_SESSION['username'])) {
         <div class="logo">
             <a href="index.php">The Social Net</a>
         </div>
+
+        <div class="search">
+
+			<form action="search.php" method="GET" name="search_form">
+				<input type="text" onkeyup="getLiveSearchUsers(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="Search..." autocomplete="off" id="search_text_input">
+
+				<div class="button_holder">
+					<img src="assets/images/icons/magnifying-glass.svg">
+				</div>
+
+			</form>
+
+			<div class="search_results">
+			</div>
+
+			<div class="search_results_footer_empty">
+			</div>
+
+
+
+		</div>
+
+
         <nav>
             <?php
             //Unread messages 
@@ -80,12 +103,12 @@ if (isset($_SESSION['username'])) {
                 ?>
             </a>
             <a href="requests.php">
-				<i class="fa fa-users fa-lg"></i>
-				<?php
-				if($num_requests > 0)
-				 echo '<span class="notification_badge" id="unread_requests">' . $num_requests . '</span>';
-				?>
-			</a>
+                <i class="fa fa-users fa-lg"></i>
+                <?php
+                if ($num_requests > 0)
+                    echo '<span class="notification_badge" id="unread_requests">' . $num_requests . '</span>';
+                ?>
+            </a>
             <a href="#">
                 <i class="fa-solid fa-gear fa-lg"></i>
             </a>
