@@ -1,1 +1,1 @@
-notification system
+fixed Message.php. Error was in the db table.
