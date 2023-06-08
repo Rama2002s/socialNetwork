@@ -50,7 +50,8 @@ require 'includes/form_handlers/login_handler.php';
 					}
 					?>" required>
 					<br>
-					<input type="password" name="log_password" placeholder="Password">
+					<input type="password" name="log_password" placeholder="Password" id="password">
+					<img src="assets\images\icons\eye-close.png" alt="show password" id="eyeicon">
 					<br>
 					<?php if (in_array("Email or password was incorrect<br>", $error_array))
 						echo "Email or password was incorrect<br>"; ?>
@@ -61,6 +62,25 @@ require 'includes/form_handlers/login_handler.php';
 
 				</form>
 			</div>
+
+			<script>
+			let eyeicon = document.getElementById("eyeicon");
+			let password = document.getElementById("password");
+
+			eyeicon.onclick = function(){
+				if(password.type == "password"){
+					password.type = "text";
+					eyeicon.src = "assets/images/icons/eye-open.png";
+				}
+				else{
+					password.type = "password";
+					eyeicon.src = "assets/images/icons/eye-close.png";
+				}
+			}
+
+
+			</script>
+
 
 			<div id="second">
 
@@ -104,9 +124,11 @@ require 'includes/form_handlers/login_handler.php';
 						echo "Emails don't match<br>"; ?>
 
 
-					<input type="password" name="reg_password" placeholder="Password" required>
+					<input type="password" name="reg_password" placeholder="Password" required id="password2">
+					<img src="assets\images\icons\eye-close.png" alt="show password" id="eyeicon2">
 					<br>
-					<input type="password" name="reg_password2" placeholder="Confirm Password" required>
+					<input type="password" name="reg_password2" placeholder="Confirm Password" required id="password3">
+					<img src="assets\images\icons\eye-close.png" alt="show password" id="eyeicon3">
 					<br>
 					<?php if (in_array("Your passwords do not match<br>", $error_array))
 						echo "Your passwords do not match<br>";
@@ -127,6 +149,39 @@ require 'includes/form_handlers/login_handler.php';
 				</form>
 
 			</div>
+
+			<script>
+				let eyeicon2 = document.getElementById("eyeicon2");
+				let password2 = document.getElementById("password2");
+
+				eyeicon2.onclick = function(){
+					if(password2.type == "password"){
+						password2.type = "text";
+						eyeicon2.src = "assets/images/icons/eye-open.png";
+					}
+					else{
+						password2.type = "password";
+						eyeicon2.src = "assets/images/icons/eye-close.png";
+					}
+				}
+			
+				let eyeicon3 = document.getElementById("eyeicon3");
+				let password3 = document.getElementById("password3");
+
+				eyeicon3.onclick = function(){
+					if(password3.type == "password"){
+						password3.type = "text";
+						eyeicon3.src = "assets/images/icons/eye-open.png";
+					}
+					else{
+						password3.type = "password";
+						eyeicon3.src = "assets/images/icons/eye-close.png";
+					}
+				}
+			
+			</script>
+
+
 
 		</div>
 

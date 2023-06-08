@@ -22,6 +22,27 @@ html , body{
     background-size: cover;
 } */
 
+
+#first, #second{
+	display: block;
+	align-items: center;
+}
+
+#first input, #second input{
+    width: 80%;
+    padding: 10px 0;
+    
+}
+
+#first img, #second img{
+    width: 35px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+}
+
 form{
     text-align: center;
 }
